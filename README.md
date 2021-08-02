@@ -2,7 +2,7 @@
 
 ### Demo
 
-An demo to use PiePieSpider is at [here](https://github.com/Hedaozi/Spider/tree/main/CnkiSpider/QueryResult). To see how PiePieSpider works, you may focus on [CnkiSpider/CnkiNetWalker.py](https://github.com/Hedaozi/Spider/blob/main/CnkiSpider/QueryResult/CnkiSpider/CnkiNetWalker.py).
+An demo to use PiePieSpider is at [here](https://github.com/Hedaozi/Spider/tree/main/CnkiSpider/QueryResult), especially [CnkiSpider/CnkiNetWalker.py](https://github.com/Hedaozi/Spider/blob/main/CnkiSpider/QueryResult/CnkiSpider/CnkiNetWalker.py).
 
 ### Usage
 
