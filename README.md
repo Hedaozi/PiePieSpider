@@ -36,17 +36,6 @@ A very simple queue class. Multithreading is not supported.
 A SimpleQueue has 3 fields, `head`, `tail` and `queue.` When pop, the queue set `head` to `head + 1` instead of remove the popped item from the `queue` (a `list` in fact). If you want to remove the popped item from the `queue`, use `self.Compress()` method or `self.Reinitialize()` method.
 
 ##### Properties
-<style>
-table th:first-of-type {
-	width: 33%;
-}
-table th:nth-of-type(2) {
-	width: 33%;
-}
-table th:nth-of-type(3) {
-	width: 33%;
-}
-</style>
 
 | Usage | Return | Description |
 | ----- | ------ | ----------- |
