@@ -1,10 +1,10 @@
-# Introduction to PiePieSpider
+## Introduction to PiePieSpider
 
-## Demo
+### Demo
 
 An demo to use PiePieSpider is at [here](https://github.com/Hedaozi/Spider/tree/main/CnkiSpider/QueryResult). To see how PiePieSpider works, you may focus on [CnkiSpider/CnkiNetWalker.py](https://github.com/Hedaozi/Spider/blob/main/CnkiSpider/QueryResult/CnkiSpider/CnkiNetWalker.py).
 
-## Usage
+### Usage
 
 Copy the whole folder to root directory of your Python project. Then
 
@@ -13,11 +13,11 @@ from PiePieSpider.Frame import *
 from PiePieSpider.Content import *
 ```
 
-# Simple API References
+## Simple API References
 
 See API references at [here](https://hedaozi.github.io/Documentations/Reference-PiePieSpider).
 
-## Dependencies:
+### Dependencies:
 
 - Python 3
 - requests
@@ -27,15 +27,15 @@ See API references at [here](https://hedaozi.github.io/Documentations/Reference-
 - time
 - traceback
 
-## PiePieSpider.SimpleQueue {#PiePieSpider-SimpleQueue}
+### PiePieSpider.SimpleQueue
 
-### SimpleQueue
+#### SimpleQueue
 
 A very simple queue class. Multithreading is not supported. 
 
 A SimpleQueue has 3 fields, `head`, `tail` and `queue.` When pop, the queue set `head` to `head + 1` instead of remove the popped item from the `queue` (a `list` in fact). If you want to remove the popped item from the `queue`, use `self.Compress()` method or `self.Reinitialize()` method.
 
-#### Properties
+##### Properties
 
 | Usage | Return | Description |
 | ----- | ------ | ----------- |
@@ -50,7 +50,7 @@ A SimpleQueue has 3 fields, `head`, `tail` and `queue.` When pop, the queue set 
 | `SimpleQueue.AsDict` | `dict` | Convert to `dict`. |
 | `SimpleQueue.AsString` | `str` | Convert to `str`. |
 
-#### Methods
+##### Methods
 
 | Usage | Return | Description |
 | ----- | ------ | ----------- |
@@ -62,18 +62,18 @@ A SimpleQueue has 3 fields, `head`, `tail` and `queue.` When pop, the queue set 
 | `SimpleQueue.Clean(self)` | `None` | Pop all items without return value. |
 | `SimpleQueue.Reinitialize(self)` | `None` | Set queue as new. |
 
-#### Class Methods
+##### Class Methods
 
 | Usage | Return | Description |
 | ----- | ------ | ----------- |
 | `SimpleQueue.FromString(cls, string: str)` | `SimpleQueue` | Construct method. Create a `SimpleQueue` instance from **json** style string. |
 | `SimpleQueue.FromDict(cls, dic: dict)` | `SimpleQueue` | Construct method. Create a `SimpleQueue` instance from `dict`. |
 
-## PiePieSpider.Content {#PiePieSpider-Content}
+### PiePieSpider.Content
 
-### RequestGetter
+#### RequestGetter
 
-#### Properties
+##### Properties
 
 | Usage | Description |
 | ----- | ----------- |
@@ -81,16 +81,16 @@ A SimpleQueue has 3 fields, `head`, `tail` and `queue.` When pop, the queue set 
 | RequestGetter.Text | |
 | RequestGetter.Bytes | |
 
-#### Methods
+##### Methods
 
 | Usage | Description |
 | ----- | ----------- |
 | RequestGetter.Get(self) | |
 | RequestGetter.Post(self, formData, verify = False) | |
 
-### HtmlTextTools
+#### HtmlTextTools
 
-#### Class Methods
+##### Class Methods
 
 | Usage | Description |
 | ----- | ----------- |
@@ -100,46 +100,46 @@ A SimpleQueue has 3 fields, `head`, `tail` and `queue.` When pop, the queue set 
 | HtmlTextTools.DropSpace(cls, string: str) | |
 | HtmlTextTools.DropAllSpacing(cls, string: str) | |
 
-### XmlParser
+#### XmlParser
 
-#### Class Methods
+##### Class Methods
 
 | Usage | Description |
 | ----- | ----------- |
 | XmlParser.ElementTree(cls, html: str) | |
 | XmlParserTryCatchXpath(cls, xml: lxml.etree._ElementTree, xpaths: list, index: int = 0) | |
 
-### ReParser
+#### ReParser
 
-#### Class Methods
+##### Class Methods
 
 | Usage | Description |
 | ----- | ----------- |
 | ReParser.QuickMatch(cls, regExp: str, string: str, index = 0) | |
 
-### BaseExtender
+#### BaseExtender
 
-### BaseNetWalker
+#### BaseNetWalker
 
-#### Properties
+##### Properties
 
 | Usage | Description |
 | ----- | ----------- |
 | BaseNetWalker.Result | |
 | BaseNetWalker.ErrorInfo | |
 
-## PiePieSpider.Frame {#PiePieSpider-Frame}
+### PiePieSpider.Frame
 
-### WorkImage
+#### WorkImage
 
-#### Methods
+##### Methods
 
 | Usage | Description |
 | ----- | ----------- |
 | Save(self, path: str) | |
 | SaveAsDir(self, path: str, storageLengthLimit: int) | Not support currently. |
 
-#### Class Methods
+##### Class Methods
 
 | Usage | Description |
 | ----- | ----------- |
@@ -147,9 +147,9 @@ A SimpleQueue has 3 fields, `head`, `tail` and `queue.` When pop, the queue set 
 | FromDir(cls, path: str, storageLengthLimit: int) | Not support currently. |
 | New(cls, initialItems: list) | |
 
-### SimpleSpiderFrame
+#### SimpleSpiderFrame
 
-#### Methods
+##### Methods
 
 | Usage | Description |
 | ----- | ----------- |
@@ -164,7 +164,7 @@ A SimpleQueue has 3 fields, `head`, `tail` and `queue.` When pop, the queue set 
 | ReportCacheSavingDone(self) | |
 | SpiderPause(self) | |
 
-### MultiThreadSpiderFrame
+#### MultiThreadSpiderFrame
 
 Not support currently.
 
