@@ -1,0 +1,39 @@
+# PiePieSpider.Frame {#PiePieSpider-Frame}
+
+## WorkImage
+
+### Methods
+
+| Usage | Description |
+| ----- | ----------- |
+| Save(self, path: str) | |
+| SaveAsDir(self, path: str, storageLengthLimit: int) | Not support currently. |
+
+### Class Methods
+
+| Usage | Description |
+| ----- | ----------- |
+| FromJson(cls, path: str) | |
+| FromDir(cls, path: str, storageLengthLimit: int) | Not support currently. |
+| New(cls, initialItems: list) | |
+
+## SimpleSpiderFrame
+
+### Methods
+
+| Usage | Description |
+| ----- | ----------- |
+| LoadWorkImage(self, workImage: WorkImage) | |
+| NewStart(self, initialItems: list, outputPath: str, groupSize: int) | |
+| Continue(self, outputPath: str, groupSize: int, workImage: WorkImage = None, workImagePath: str = None, fixError: bool = True) | |
+| FixError(self) | |
+| StartSpider(self, outputPath: str, groupSize: int) | |
+| ReportProcess(self) | |
+| ReportResult(self, isError: bool, result: str = "") | |
+| ReportCache(self) | |
+| ReportCacheSavingDone(self) | |
+| SpiderPause(self) | |
+
+## MultiThreadSpiderFrame
+
+Not support currently.

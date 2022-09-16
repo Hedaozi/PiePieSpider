@@ -1,0 +1,41 @@
+# PiePieSpider.SimpleQueue {#PiePieSpider-SimpleQueue}
+
+## SimpleQueue
+
+A very simple queue class. Multithreading is not supported. 
+
+A SimpleQueue has 3 fields, `head`, `tail` and `queue.` When pop, the queue set `head` to `head + 1` instead of remove the popped item from the `queue` (a `list` in fact). If you want to remove the popped item from the `queue`, use `self.Compress()` method or `self.Reinitialize()` method.
+
+### Properties
+
+| Usage | Return | Description |
+| ----- | ------ | ----------- |
+| `SimpleQueue.IsEmpty` | `bool` | Whether the queue is empty. |
+| `SimpleQueue.Head` | `int` | The index of head item. |
+| `SimpleQueue.Tail` | `int` | The index of tail item. |
+| `SimpleQueue.ActiveIndexes` | `list` | Indexes of items in the queue. |
+| `SimpleQueue.ActiveItems` | `list` | Items in the queue. |
+| `SimpleQueue.ActiveCount` | `int` | Length of the queue. |
+| `SimpleQueue.History` | `list` | Items in the queue and popped items. |
+| `SimpleQueue.Last` | `Any`| Last popped item. |
+| `SimpleQueue.AsDict` | `dict` | Convert to `dict`. |
+| `SimpleQueue.AsString` | `str` | Convert to `str`. |
+
+### Methods
+
+| Usage | Return | Description |
+| ----- | ------ | ----------- |
+| `SimpleQueue.Add(self, item: Any)` | `None` | Add an item. |
+| `SimpleQueue.Pop(self)` | `Any` | Pop an item. |
+| `SimpleQueue.AddItems(self, items: list)` | `None` | Add items. |
+| `SimpleQueue.Compress(self)` | `None` | Delete deactive (popped) items from history. |
+| `SimpleQueue.PopAll(self)` | `list` | Pop all items. |
+| `SimpleQueue.Clean(self)` | `None` | Pop all items without return value. |
+| `SimpleQueue.Reinitialize(self)` | `None` | Set queue as new. |
+
+### Class Methods
+
+| Usage | Return | Description |
+| ----- | ------ | ----------- |
+| `SimpleQueue.FromString(cls, string: str)` | `SimpleQueue` | Construct method. Create a `SimpleQueue` instance from **json** style string. |
+| `SimpleQueue.FromDict(cls, dic: dict)` | `SimpleQueue` | Construct method. Create a `SimpleQueue` instance from `dict`. |

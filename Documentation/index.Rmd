@@ -1,0 +1,19 @@
+--- 
+title: "Reference of PiePieSpider"
+author: "Lingfeng He"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: manual
+biblio-style: apalike
+link-citations: yes
+---
+
+# Dependencies:
+
+- Python 3
+- requests
+- lxml
+- json
+- re
+- time
+- traceback

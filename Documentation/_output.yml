@@ -1,0 +1,5 @@
+bookdown::bs4_book:
+  css: style.css
+
+bookdown::html_notebook2:
+  css: style.css
